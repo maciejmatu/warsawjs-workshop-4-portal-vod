@@ -3,7 +3,7 @@ export class VIDEO {
     description: string;
     category: number;
     is_free: boolean;
-    populary: number;
+    populary?: number;
     id: string;
     img: string
 

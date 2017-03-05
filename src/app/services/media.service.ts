@@ -7,11 +7,24 @@ export class MediaService {
   constructor() { }
 
   public Videos():VIDEO[]{
-    return VIDEOS;
+    let videos = localStorage.getItem('videos');
+
+    if (!videos) {
+      localStorage.setItem('videos', JSON.stringify(VIDEOS));
+      videos = localStorage.getItem('videos');
+    }
+
+    return JSON.parse(videos);
   }
 
   public Categories():CATEGORY[]{
     return CATEGORIES;
+  }
+
+  public setVideos(video: VIDEO):void {
+    var videos = this.Videos();
+    videos.push(video);
+    localStorage.setItem('videos', JSON.stringify(videos));
   }
 }
 

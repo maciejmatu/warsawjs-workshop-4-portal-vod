@@ -23,7 +23,7 @@ export class StartComponent implements OnInit {
   }
 
     private search(){
-    this.router.navigate(['./filmy', '', this.query]);
+    this.router.navigate(['./szukaj', this.query]);
   }
 
   private getCategories(){
@@ -35,7 +35,7 @@ export class StartComponent implements OnInit {
   }
 
   private goCategory(category){
-    this.router.navigate(['./filmy', category,'']);
+    this.router.navigate(['./filmy', category]);
   }
 
 }

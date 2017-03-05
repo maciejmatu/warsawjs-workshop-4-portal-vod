@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
   }
 
   private search(){
-    this.router.navigate(['./filmy', '', this.query]);
+    this.router.navigate(['./szukaj', this.query]);
   }
 
   private getCategories(){

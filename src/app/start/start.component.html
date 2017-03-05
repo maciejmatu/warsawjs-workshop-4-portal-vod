@@ -1,7 +1,7 @@
 <div class="jumbotron" style="margin-top: 40px; padding-bottom: 360px">
   <h1>My VOD</h1>
   <p>Wybierz kategorie lub wyszukaj</p>
-  <div class="col-sm-6 col-sm-offset-3">
+  <div class="col-sm-9 col-sm-offset-1">
     <ul class="list-group">
       <li class="list-group-item" style="background: #87CEFA; height: 70px">
         <form class="navbar-form navbar-left" (submit)="search()">
@@ -17,7 +17,7 @@
     </ul>
     <ul class="list-group">
       <li class="list-group-item" style="background: #87CEFA">Kategorie</li>
-      <li *ngFor="let cat of categories" class="list-group-item" (click)="goCategory(cat.name)"><a [routerLink]="['filmy', cat.name, '']"> {{ cat.name }} </a></li>
+      <li *ngFor="let cat of categories" class="list-group-item" (click)="goCategory(cat.name)"><a [routerLink]="['filmy', cat.name]"> {{ cat.name }} </a></li>
     </ul>
   </div>
 </div>
